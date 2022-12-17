@@ -42,8 +42,9 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
-    @media screen and (min-width: 900px) {
-        width: 880px;
+    @media screen and (min-width: 1000px) {
+        width: 980px;
+        height: 130px;
     }
 `
 
@@ -53,7 +54,7 @@ const Logo = styled.img`
 
 const Overview = styled.ul`
     display: none;
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1000px) {
         list-style:  none;
         display: flex;
         gap: 45px;
@@ -61,11 +62,14 @@ const Overview = styled.ul`
 `
 
 const Item = styled.li`
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
 `
 
 const Contact = styled.div`
     display: none;
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1000px) {
         width: 108px;
         height: 44px;
         background-color: #1355FF;
@@ -73,6 +77,9 @@ const Contact = styled.div`
         justify-content: center;
         align-items: center;
         color: white;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
     }
    
 `
@@ -85,7 +92,7 @@ const BrgDiv = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1000px) {
         display: none;
     }
 `
@@ -97,7 +104,7 @@ const Brg = styled.div`
     border: 2px solid green;
     //background-color: #1355FF;
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1000px) {
         display: none;
     }
 `
