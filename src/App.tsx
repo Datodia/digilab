@@ -6,6 +6,7 @@ import { Header } from './components/Header/Header'
 import { Trust } from './components/Trust/Trust'
 import { VideoSec } from './components/VideoSec/VideoSec'
 import { Opus } from './components/Opus/Opus'
+import { Work } from './components/Work/Work'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Trust />
       <VideoSec />
       <Opus />
+      <Work />
     </Wrapper>
   )
 }
