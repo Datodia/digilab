@@ -3,6 +3,7 @@ import './App.css'
 import styled from 'styled-components'
 import Navbar from './components/Navbar/Navbar'
 import { Header } from './components/Header/Header'
+import { Trust } from './components/Trust/Trust'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <Wrapper>
       <Navbar />
       <Header />
+      <Trust />
     </Wrapper>
   )
 }
