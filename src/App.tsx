@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import { Header } from './components/Header/Header'
 import { Trust } from './components/Trust/Trust'
 import { VideoSec } from './components/VideoSec/VideoSec'
+import { Opus } from './components/Opus/Opus'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Trust />
       <VideoSec />
+      <Opus />
     </Wrapper>
   )
 }
