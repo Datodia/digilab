@@ -40,7 +40,6 @@ export const Resourses = () => {
 const Wrapper = styled.div`
     width: 330px;
     margin: auto;
-    border: 1px solid blue;
     @media screen and (min-width: 1000px) {
         width: 980px;
     }
@@ -75,6 +74,12 @@ const Button = styled.div`
     align-items: center;
     color: white;
     font-size: 14px;
+    &:hover{
+            transform: scale(1.1);
+            background-color: blue;
+            transition: .3s;
+            font-weight: 700;
+        }
 `
 
 const Body = styled.div`
@@ -88,6 +93,11 @@ const Item = styled.div`
     margin-bottom: 80px;
     @media screen and (min-width: 1000px) {
         width: 280px;
+        &:hover{
+            transform: scale(1.1);
+            transition: .3s;
+            border: 2px solid lightblue;
+        }
     }
 `
 const Img = styled.img`

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 export const VideoSec = () => {
     return (
@@ -25,12 +25,22 @@ const Wrapper = styled.div`
         width: 980px;
     }
 `
+const rotate = keyframes`
+    to{
+        transform: rotate(360deg)
+    }
+`
 
 const VideoRec = styled.div`
     width: 64px;
     height: 64px;
     background-color: #F7F9FC;
     position: relative;
+    &:hover{
+            transform: scale(1.1);
+            filter: brightness(60%);
+            transition: .3s;
+        }
 `
 const VideoTitle = styled.h3`
     font-size: 14px;

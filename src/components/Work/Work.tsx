@@ -77,6 +77,11 @@ const Button = styled.div`
     align-items: center;
     color: white;
     margin-top: 15px;
+    &:hover{
+            transform: translateY(-10px);
+            transition: .3s;
+            font-weight: 700;
+        }
 `
 
 const BlogDiv = styled.div`
@@ -91,6 +96,11 @@ const Blog = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    &:hover{
+            transform: scale(1.1);
+            transition: .3s;
+            font-weight: 700;
+        }
 `
 const Img = styled.img`
     width: 280px;

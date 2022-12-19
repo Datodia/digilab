@@ -37,7 +37,6 @@ const Wrapper = styled.div`
     width: 375px;
     height: 100px;
     margin: auto;
-    border: 2px solid red;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -49,7 +48,13 @@ const Wrapper = styled.div`
 `
 
 const Logo = styled.img`
-    
+    cursor: pointer;
+    @media screen and (min-width: 1000px){
+        &:hover{
+            transform: scale(1.1);
+            transition: .3s;
+        }
+    }
 `
 
 const Overview = styled.ul`
@@ -65,6 +70,13 @@ const Item = styled.li`
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
+    @media screen and (min-width: 1000px){
+        &:hover{
+            transform: scale(1.1);
+            transition: .3s;
+            font-weight: 700;
+        }
+    }
 `
 
 const Contact = styled.div`
@@ -80,6 +92,11 @@ const Contact = styled.div`
         cursor: pointer;
         font-size: 14px;
         font-weight: 500;
+        &:hover{
+            transform: scale(1.1);
+            background-color: blue;
+            transition: .3s;
+        }
     }
    
 `
@@ -101,8 +118,6 @@ const Brg = styled.div`
     width: 375px;
     margin: auto;
     height: 270px;
-    border: 2px solid green;
-    //background-color: #1355FF;
 
     @media screen and (min-width: 1000px) {
         display: none;
@@ -132,7 +147,6 @@ const BrgContact = styled.div`
     align-items: center;
     background-color: #1355FF;
     color: white;
-    border: 1px solid red;
     margin:auto;
     margin-top: 10px;
 `

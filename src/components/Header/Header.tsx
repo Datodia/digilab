@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+import { Keyframes } from "styled-components"
 
 export const Header = () => {
     return (
@@ -54,18 +55,22 @@ export const Header = () => {
 
 const Wrapper = styled.div`
     width: 375px;
-    border: 1px solid blue;
     margin: auto;
-
     @media screen and (min-width: 1000px) {
         width: 980px;
     }
 `
 
+const rotate = keyframes`
+    to{
+        transform: rotate(360deg)
+    }
+`
 const TopRec = styled.div`
     width: 64px;
     height: 64px;
     background-color: #1355FF;
+    animation: ${rotate} 6s linear infinite;
 `
 
 const DarkContainer = styled.div`
@@ -81,6 +86,7 @@ const LitteRec = styled.div`
     width: 32px;
     height: 32px;
     transform: translateX(64px);
+    
 `
 
 const Texts = styled.div`
@@ -143,11 +149,15 @@ const Contact = styled.div`
     cursor: pointer;
     @media screen and (min-width: 1000px) {
         margin-top: 20px;
+        &:hover{
+            transform: scale(1.1);
+            background-color: #132eff;
+            transition: .3s;
+        }
     }
 `
 const ContactImg = styled.img`
     cursor: pointer;
-
 `
 
 const Explore = styled.h2`
@@ -157,6 +167,14 @@ const Explore = styled.h2`
     margin-top: 19px;
     text-align: center;
     cursor: pointer;
+    @media screen and (min-width: 1000px) {
+        &:hover{
+            transform: scale(1.1);
+            color: #c6c6c6;
+            font-weight: 700;
+            transition: .3s;
+        }
+    }
 `
 
 const ManDiv = styled.div`
@@ -254,7 +272,6 @@ const ScrollDiv = styled.div`
     height: 116px;
     width: 800px;
     margin: auto;
-    border: 2px solid red;
     display: none;
     @media screen and (min-width: 1000px) {
         display: flex; 
