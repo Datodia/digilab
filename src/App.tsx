@@ -8,6 +8,7 @@ import { VideoSec } from './components/VideoSec/VideoSec'
 import { Opus } from './components/Opus/Opus'
 import { Work } from './components/Work/Work'
 import { Create } from './components/Create/Create'
+import { Blogs } from './components/Blogs/Blogs'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Opus />
       <Work />
       <Create />
+      <Blogs />
     </Wrapper>
   )
 }
