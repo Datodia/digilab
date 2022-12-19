@@ -10,6 +10,7 @@ import { Work } from './components/Work/Work'
 import { Create } from './components/Create/Create'
 import { Blogs } from './components/Blogs/Blogs'
 import { Resourses } from './components/Resources/Resourses'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <Create />
       <Blogs />
       <Resourses />
+      <Footer />
     </Wrapper>
   )
 }
