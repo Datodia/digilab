@@ -9,6 +9,7 @@ import { Opus } from './components/Opus/Opus'
 import { Work } from './components/Work/Work'
 import { Create } from './components/Create/Create'
 import { Blogs } from './components/Blogs/Blogs'
+import { Resourses } from './components/Resources/Resourses'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Work />
       <Create />
       <Blogs />
+      <Resourses />
     </Wrapper>
   )
 }
