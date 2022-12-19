@@ -7,6 +7,7 @@ import { Trust } from './components/Trust/Trust'
 import { VideoSec } from './components/VideoSec/VideoSec'
 import { Opus } from './components/Opus/Opus'
 import { Work } from './components/Work/Work'
+import { Create } from './components/Create/Create'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <VideoSec />
       <Opus />
       <Work />
+      <Create />
     </Wrapper>
   )
 }
