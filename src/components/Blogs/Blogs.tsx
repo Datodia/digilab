@@ -1,5 +1,21 @@
+import { useState } from "react"
 import styled from "styled-components"
 export const Blogs = () => {
+    const [num, setNum] = useState<number>(1)
+
+    const prev = () => {
+        setNum(num => num - 1)
+        if (num === 1) {
+            setNum(3)
+        }
+    }
+    const next = () => {
+        setNum(num => num + 1)
+        if (num === 3) {
+            setNum(1)
+        }
+    }
+
     return (
         <Wrapper>
             <Blog>
@@ -43,18 +59,32 @@ export const Blogs = () => {
 
             <Blog>
                 <TxtDiv>
-                    <Img style={{ filter: "brightness(0)", marginLeft: "18%" }} src="assets/stamps.svg" />
-                    <Title style={{ fontSize: 24, textAlign: 'center' }}>
+                    {num === 1 && <Img style={{ filter: "brightness(0)", marginLeft: "18%" }} src="assets/stamps.svg" />}
+                    {num === 2 && <Img style={{ filter: "brightness(0)", marginLeft: "18%" }} src="assets/manter.svg" />}
+                    {num === 3 && <Img style={{ filter: "brightness(0)", marginLeft: "18%" }} src="assets/sugarcane.svg" />}
+                    {num === 1 && <Title style={{ fontSize: 24, textAlign: 'center' }}>
                         The Opus UI Kit lets you showcase your work in style. It's helped take our business online
-                    </Title>
-                    <Name>ALEXA F.</Name>
-                    <Position>designer <span style={{ color: '#1355FF' }}>@STAMPS</span></Position>
+                    </Title>}
+                    {num === 2 && <Title style={{ fontSize: 24, textAlign: 'center' }}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget consectetur eros. Aliquam erat volutpat.
+                    </Title>}
+                    {num === 3 && <Title style={{ fontSize: 24, textAlign: 'center' }}>
+                        A UI Kit that's Modern & ElegantA UI Kit that's Modern & ElegantA UI Kit that's Modern & Elegant
+                    </Title>}
+                    {num === 1 && <Name>ALEXA F.</Name>}
+                    {num === 2 && <Name>JESSICA B.</Name>}
+                    {num === 3 && <Name>VANNESA L.</Name>}
+                    {num === 1 && <Position>designer <span style={{ color: '#1355FF' }}>@STAMPS</span></Position>}
+                    {num === 2 && <Position>developer <span style={{ color: '#1355FF' }}>@Manter</span></Position>}
+                    {num === 3 && <Position>HR <span style={{ color: '#1355FF' }}>@sugarcane</span></Position>}
                     <Buttons>
-                        <Img style={{ cursor: 'pointer' }} src="assets/arrow.svg" />
-                        <Img style={{ cursor: 'pointer', transform: 'rotate(180deg)' }} src="assets/arrow.svg" />
+                        <BtnImg onClick={prev} src="assets/arrow.svg" />
+                        <BtnImg onClick={next} src="assets/next.svg" />
                     </Buttons>
                 </TxtDiv>
-                <Img style={{ width: 330 }} src="assets/women3.svg" />
+                {num === 1 && <Img style={{ width: 330 }} src="assets/women3.svg" />}
+                {num === 2 && <Img style={{ width: 330 }} src="assets/women1.svg" />}
+                {num === 3 && <Img style={{ width: 330 }} src="assets/women2.svg" />}
             </Blog>
         </Wrapper >
     )
@@ -63,7 +93,6 @@ export const Blogs = () => {
 const Wrapper = styled.div`
     width: 330px;
     margin: auto;
-    border: 1px solid green;
     @media screen and (min-width: 1000px) {
         width: 980px;
     }
@@ -114,7 +143,12 @@ const Task = styled.div`
 `
 
 const Img = styled.img`
-    
+    @media screen and (min-width: 1000px){
+        &:hover{
+            transform: scale(1.2);
+            transition: .3s;
+        }
+    }
 `
 const TaskTitle = styled.h3`
     font-size: 16px;
@@ -138,7 +172,6 @@ const ImgDiv = styled.div`
     z-index: -1;
     @media screen and (min-width: 1000px){
         transform: translate(-530px, -302px);
-
     }
 `
 
@@ -165,4 +198,15 @@ const Buttons = styled.div`
     justify-content: center;
     gap: 40px;
     margin-top: 20px;
+`
+
+const BtnImg = styled.img`
+    cursor: pointer;
+    @media screen and (min-width: 1000px){
+        &:hover{
+            transform: scale(1.2);
+            filter: brightness(50%);
+            transition: .3s;
+        }
+    }
 `
