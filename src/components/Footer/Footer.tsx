@@ -106,6 +106,11 @@ const Link = styled.h4`
     font-weight: 500;
     margin: 16px 0;
     cursor: pointer;
+    &:hover{
+            transform: scale(1.1);
+            text-decoration: underline;
+            transition: .3s;
+        }
 `
 
 const SearchDiv = styled.div`
@@ -140,6 +145,11 @@ const Button = styled.div`
     font-weight: 400;
     @media screen and (min-width: 1000px) {
         width: 30%;
+        &:hover{
+           background-color: #00009e;
+           font-weight: 700;
+            transition: .5s;
+        }
     }
 `
 

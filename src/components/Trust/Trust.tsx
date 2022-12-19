@@ -63,6 +63,12 @@ const Brands = styled.div`
 `
 const BrandItem = styled.img`
     cursor: pointer;
+    &:hover{
+            transform: scale(1.1);
+            filter: brightness(50%);
+            transition: .3s;
+        }
+
 `
 
 const Statistic = styled.div`
@@ -75,6 +81,10 @@ const Statistic = styled.div`
 const StatItem = styled.div`
     text-align: center;
     margin-bottom: 70px;
+    &:hover{
+            transform: scale(1.1);
+            transition: .3s;
+        }
 `
 
 const Number = styled.h2`

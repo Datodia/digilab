@@ -42,7 +42,6 @@ export const Opus = () => {
 const Wrapper = styled.div`
     width: 330px;
     margin: auto;
-    border: 2px solid red;
     margin-top: 130px;
     @media screen and (min-width: 1000px) {
         width: 980px;
@@ -96,7 +95,12 @@ const Button = styled.div`
     margin-top: 45px;
     cursor: pointer;
     @media screen and (min-width: 1000px) {
-        transform: translateX(40px)
+        transform: translateX(40px);
+        &:hover{
+            transform: scale(1.1);
+            transition: .3s;
+            font-weight: 700;
+        }
     }
 `
 
@@ -112,7 +116,12 @@ const UIBlock = styled.div`
     margin-top: 30px;
     background-color: white;
     @media screen and (min-width: 1000px) {
-        transform: translateX(-40px)
+        transform: translateX(-40px);
+        &:hover{
+            transform: scale(1.1);
+            transition: .3s;
+            font-weight: 700;
+        }
     }
 `
 const Img = styled.img`
@@ -121,6 +130,9 @@ const UITitle = styled.h2`
     font-size: 24px;
     color: #061237;
     font-weight: 700;
+    &:hover{
+            color: #1355FF;
+        }
 `
 
 const BuildRec = styled.div`

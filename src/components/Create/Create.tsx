@@ -44,7 +44,6 @@ export const Create = () => {
 const Wrapper = styled.div`
     width: 330px;
     margin: auto;
-    border: 1px solid red;
     margin-top: 70px;
     @media screen and (min-width: 1000px) {
         width: 980px;
@@ -67,6 +66,11 @@ const Block = styled.div`
     margin-bottom: 60px;
     @media screen and (min-width: 1000px) {
         gap: 30px;
+        &:hover{
+            transform: scale(1.1);
+            transition: .3s;
+            font-weight: 700;
+        }
     }
 `
 
@@ -140,5 +144,11 @@ const Button = styled.div`
     cursor: pointer;
     @media screen and (min-width: 1000px) {
         margin-top: 80px;
+        &:hover{
+            transform: scale(1.1);
+            transition: .3s;
+            font-weight: 700;
+            background-color: gray;
+        }
     }
 `

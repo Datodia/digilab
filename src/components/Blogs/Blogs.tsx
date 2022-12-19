@@ -1,5 +1,5 @@
 import { useState } from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 export const Blogs = () => {
     const [num, setNum] = useState<number>(1)
 
@@ -97,6 +97,11 @@ const Wrapper = styled.div`
         width: 980px;
     }
 `
+const rotate = keyframes`
+    to{
+        transform: rotate(360deg)
+    }
+`
 
 const Blog = styled.div`
     margin-bottom: 40px;
@@ -116,6 +121,8 @@ const Feature = styled.div`
     width: 64px;
     height: 64px;
     background-color: #F7F9FC;
+    animation: ${rotate} 5s linear infinite;
+    background-color: #ada8a8;
 `
 const FeatureTxt = styled.p`
     font-size: 14px;
@@ -140,6 +147,10 @@ const Task = styled.div`
     align-items: center;
     gap: 20px;
     margin-top: 16px;
+    &:hover{
+            transform: scale(1.1);
+            transition: .3s;
+        }
 `
 
 const Img = styled.img`
